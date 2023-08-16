@@ -5,6 +5,6 @@ const router = new Router();
 router.prefix('/webhooks');
 
 router
-    .get('/', webhookController.healthCheck);
+    .post('/', webhookController.healthCheck);
 
 export default router;
