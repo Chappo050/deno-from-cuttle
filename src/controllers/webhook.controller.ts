@@ -1,26 +1,5 @@
 export const healthCheck = async (ctx: any) => {
-    try {
-const bodyt =  ctx.request.body();
-console.log(bodyt, bodyt.value);
-const body = await ctx.request.body();
-console.log(body);
+const body = await request.body();
 const data = body.value;
-console.log(data);
-        // Send a response back to the caller
-        ctx.response.status = 200;
-        ctx.response.body = {
-            success: true,
-            data: "Webhook received successfully"
-        };
-
-    } catch (error) {
-        // Log and handle the error
-        console.error("Error handling webhook: ", error);
-        
-        ctx.response.status = 500;
-        ctx.response.body = {
-            success: false,
-            message: "Internal Server Error"
-        };
-    }
+    console.log(body,data)
 };
