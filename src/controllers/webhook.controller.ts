@@ -1,7 +1,5 @@
 export const healthCheck = async (ctx: any) => {
     try {
-        const body = await ctx.request.body();
-        const data = body.value;
 const bodyt =  ctx.request.body();
 console.log(bodyt);
 const body = await ctx.request.body();
