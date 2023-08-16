@@ -2,10 +2,12 @@ export const healthCheck = async (ctx: any) => {
     try {
         const body = await ctx.request.body();
         const data = body.value;
-
-        // Log the incoming request data
-        console.log("Received webhook data: ", data);
-
+const bodyt =  ctx.request.body();
+console.log(bodyt);
+const body = await ctx.request.body();
+console.log(body);
+const data = body.value;
+console.log(data);
         // Send a response back to the caller
         ctx.response.status = 200;
         ctx.response.body = {
